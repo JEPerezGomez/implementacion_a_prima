@@ -24,7 +24,7 @@ heuristics = {
     'Rimnicu Vilcea': 193, 'Pitesti': 100, 'Bucharest': 0
 }
 
-def busqueda_a_prima(graph, heuristics, start, goal):
+def busqueda_a_estrella(graph, heuristics, start, goal):
     # Cola de prioridad para la lista abierta
     open_list = [(0, start)]
     heapq.heapify(open_list)
@@ -67,7 +67,7 @@ def reconstruct_path(came_from, current):
 # Ejecución de la búsqueda A* en el mapa de Rumania
 start_city = 'Arad'
 destination_city = 'Bucharest'
-path = busqueda_a_prima(graph, heuristics, start_city, destination_city)
+path = busqueda_a_estrella(graph, heuristics, start_city, destination_city)
 
 # Resultado de la ruta óptima
 if path:
